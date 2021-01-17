@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="cqrs" xmlns:unless="ant:unless">
+
+    <target name="autoload" description="Generate autoloader with phpab">
+        <exec executable="${basedir}/tools/phpab" taskname="phpab">
+            <arg value="--basedir"/>
+            <arg path="src"/>
+            <arg value="--output"/>
+            <arg path="src/autoload.php"/>
+            <arg path="src"/>
+        </exec>
+
+        <exec executable="${basedir}/tools/phpab" taskname="phpab">
+            <arg value="--basedir"/>
+            <arg path="tests"/>
+            <arg value="--output"/>
+            <arg path="tests/autoload.php"/>
+            <arg path="tests"/>
+        </exec>
+    </target>
+
+    <target name="test" depends="autoload" description="Run tests with PHPUnit">
+        <exec executable="${basedir}/tools/phpunit" taskname="phpunit" failonerror="true"/>
+    </target>
+
+</project>
