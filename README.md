@@ -2,4 +2,4 @@ Example code from a workshop at The Online PHP Conference (https://phpconference
 
 Not production-ready!
 
-Intended to learn from and be inspired.
+Intended to learn from and be inspired by.

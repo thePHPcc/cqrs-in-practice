@@ -7,6 +7,8 @@ spl_autoload_register(
         static $classes = null;
         if ($classes === null) {
             $classes = array(
+                'thephpcc\\cqrs\\departureboard\\departureinformationboard' => '/DepartureInformationBoard.php',
+                'thephpcc\\cqrs\\departureboard\\flight' => '/Flight.php',
                 'thephpcc\\cqrs\\helloworld' => '/HelloWorld.php'
             );
         }
