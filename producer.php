@@ -39,14 +39,3 @@ $eventStore->store(
 );
 
 $eventStore->commit();
-
-// ----
-
-$board = new DepartureInformationBoard;
-$projector = new Projector($board);
-
-foreach ($eventStore->all() as $event) {
-    $projector->handle($event);
-}
-
-print $board->asString() . PHP_EOL;

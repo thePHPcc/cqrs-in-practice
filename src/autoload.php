@@ -9,6 +9,12 @@ spl_autoload_register(
             $classes = array(
                 'thephpcc\\cqrs\\departureboard\\departureinformationboard' => '/DepartureInformationBoard.php',
                 'thephpcc\\cqrs\\departureboard\\flight' => '/Flight.php',
+                'thephpcc\\cqrs\\departureboard\\projector' => '/Projector.php',
+                'thephpcc\\cqrs\\event' => '/Event.php',
+                'thephpcc\\cqrs\\eventstore' => '/EventStore.php',
+                'thephpcc\\cqrs\\eventstorestub' => '/EventStoreStub.php',
+                'thephpcc\\cqrs\\flightcancelledevent' => '/FlightCancelledEvent.php',
+                'thephpcc\\cqrs\\flightscheduledevent' => '/FlightScheduledEvent.php',
                 'thephpcc\\cqrs\\helloworld' => '/HelloWorld.php'
             );
         }
