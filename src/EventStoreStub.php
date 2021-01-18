@@ -10,7 +10,9 @@ class EventStoreStub implements EventStore
     {
         return unserialize(
             file_get_contents(__DIR__ . '/../eventStore.serialized'),
-            [EventStoreStub::class]
+            [
+                EventStoreStub::class
+            ]
         );
     }
 
